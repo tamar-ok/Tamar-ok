@@ -25,7 +25,12 @@ Html
         background-color: #f7f7f7;
         color:#333;
       }
-
+      .container {
+      max-width: 1100px
+      margin:auto;
+      padding:60px 25px;
+      } 
+  
       header {
         background-color:#111;
         color:white;
@@ -34,12 +39,10 @@ Html
         justify-content: space-between;
         align-items: center;
       }
-
-      header h2 {
-        margin:0;
-      }
-
-      nav a:hover {
+    
+    nav a { 
+        color: white;
+       margin-left: 18px;
         text-decoration:none
         font-size: 16px;
       }
@@ -52,14 +55,13 @@ Html
         display: flex;
         flex-wrap: wrap;
         align-items:center;
-        justify-content: center;
-        padding: 60px 20px;
-        background-color: white;
-        gap:40px;
-      }
-
+        justify-content:space-between;
+        gap: 50px;
+        margin-bottom: 80px;
+       } 
+  
       .hero-text {
-        max-width: 450px
+        max-width: 480px
       }
 
       .hero-text h1 {
@@ -69,32 +71,35 @@ Html
 
       .hero-text p {
         font-size: 18px;
-        line-height: 1.6;
+        line-height: 1.7;
       }
 
       .hero-image img {
-        width: 230px;
-        border-radius: 15px;
+        width: 260px;
+        border-radius: 18px;
       }
 
       sectoin {
-        padding: 50px 20px;
-        text-align:center;
-      }
+        margin-bottom:80px;
+      text-align:center;
+      }                
+
+       h2 {
+       margin-bottom:30px;
+       }
 
       .cards {
         display:flex;
         flex-wrap: wrap;
-        justify-contet:center;
-        gap:25px;
-        margin-top:30px;
+        justify-content:center;
+        gap:35px;
 
       .card {
         background-color:white;
-        width: 260px;
-        padding: 25px;
-        border=radius: 12px;
-        box-shadow: 0 0 10px rgba(0,0,0,0,1);
+        width: 280px;
+        padding: 30px;
+        border=radius: 14px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.08);
       }
 
       .card h3 {
@@ -103,33 +108,35 @@ Html
 
       footer {
         background-color: #111;
-        color:white;
-        text-align: center;
-        padding:20px;
-      }
+        color:#f7f7f7;
+    text-align: center;
+    padding:22px;
+  font-size:15px;
+  letter-spacing: 0.5px;
+  }
+      
       </style>
   </head>
 
   <body>
     
-      <!-- NAVIGATION -->
     <header>
       <h2>Tamar</h2>
       <nav>
         <a href="#home"> Home</a>
         <a href="#services">Services</a>
         <a href="#projects">Projects</a>
-        <a href="#Contact</a>
+        <a href="#contact</a>Contact</a>
           </nav>
           </header>
 
-          <!-- HERO SECTION-->
+          <div class="container">
+          
           <section class="hero" id=home">
           <div class="hero-text">
-            <h1>Fronted Web Design</h1>
+            <h1>Fronted Web Designer</h1>
             <p
-              iam a fronted web designer skilled in creation clean,modern,and user-friendly websites. I focus on structured layouts,responsive design,and professional presentation using
-              HTML and CSS.
+              I design clean,modern and user-friendly websites with strong focus on layout ,structure,and accessibility.
               </p>
           </div>
 
@@ -137,52 +144,49 @@ Html
           <img src=" my-photo.jpg" alt="My photo">
         </div>
         </section>
-
-          <!--SERVICES-->
+          
           <section id="services">
             <h2>My Services</h2>
 
             <div class="cards">
               <div class="card">
                 <h3>Web Design</h3>
-                <p>Designing modern and visually appealing website layouts.</p>
+                <p>Modern and visually appealing website layouts.</p>
               </div>
 
               <div class="card">
                 <h3>Frontend Development</h3>
-                <p>Building responsive website using HTML and CSS.</p>
+                <p>Responsive websitse using HTML and CSS.</p>
               </div>
 
               <div class="card">
               <h3>UI Layout Design</h3>
-                <p>Creating structured and easy -to-use website interfaces.</p>
-                <di>
-                </di>
-              </sectoin>
+                <p>Structured and user-friendly interfaces.</p>
+              </div>
+                </div>
+              </section>
 
-                <!--PROJECTS-->
                 <sectoin id="projects">
                   <h2>Projects</h2>
 
                   <div class="cards">
                     <div class="card">
-                      <h3>Personal Portoflio Website</h3>
-                      <p>Design and developed a professional personal portfolio website.</p>
+                      <h3>Portoflio Website</h3>
+                      <p>Professional personal portfolio website.</p>
                     </div>
 
                     <div class="card">
                       <h3>Buisness Website Layout</h3>
-                      <p>Created a clean website layout suitable for a small buisness.</p>
+                      <p>Clean website layout suitable for a small buisnesses.</p>
                     </div>
 
                     <div class="card">
                       <h3>Landing Page Design</h3>
-                      <p>Designed modern landing page layouts focused on clarity and usability.</p>
+                      <p>Modern landing page layouts.</p>
                     </div>
                   </div>
                 </sectoin>
-
-                <!--CONTACT-->
+              
                 <sectoin id="contact">
                   <h2>Contact</h2>
                   <p>Email: tamarok4@gmail.com</p>
