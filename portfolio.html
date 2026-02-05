@@ -72,15 +72,33 @@ Html
     color:#2563eb;
   }
        
-   @media(max-width:500px) {
-     body {
-       padding:20px;
-     } 
+       @media(max-width:500px) {
+         body {
+           padding:15px;
+           font-size:16px;
+         }
+         .profile-pic {
+           width:90%;
+         }
+         .project {
+           max-width:95%;
+           padding:15px;
+         }
+         .btn {
+           width:100%;
+           padding:12px 0;
+         }
+       }
 
-     .project {
-       max-width:90%'
-     }
-   }
+       @media(min-width:50 1px) and (max-width: 900px) {
+         .profile-pic {
+           width:70%;
+         }
+         .project {
+           max-width:80%;
+           padding:20px;
+         }
+       }
    </style>
 </head>
 <body>
@@ -89,10 +107,12 @@ Html
   <p class="role">Frontend Web Designer</p>
     
    <a href="malito:your.tamarok4@gmail.com" class="btn">Hire Me</a>
+  
     style="display:inline-block;margin-top:15px; padding:12px 24px;
+  
     background-color:#2563eb; color:white;border-radius:30px;
-    font-weight:bold;text-decoration:none;transition:0.3s;">
-    Hire Me
+  
+    font-weight:bold;text-decoration:none;transition:0.3s;">Hire Me
   </a>
 
   <img 
@@ -107,9 +127,9 @@ Html
     <p class="subheading">Some of the projects I've built recently</p>
 
     <div class="project">
-      <h3personal Portfolio</h3>
-        <p>HtMl & CSS portfoli website.</p>
-       <div
+      <h3>Personal Portfolio</h3>
+        <p>HTML & CSS portfolio website.</p>
+      </div>
 
          <div class="project">
          <h3>Landing Page</h3>
@@ -120,7 +140,6 @@ Html
           <h3>Contact Form</h3>
           <p>Simple contact form layout.</p>
         </div>
-    </div>
   </section>
 
 </body>
