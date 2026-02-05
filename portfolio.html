@@ -7,6 +7,10 @@ Html
   <meta charset="UTF-8">
     <title>Tamar|portfolio</title>
     <style>
+      .role {
+        color:#2563eb;
+        margin-bottom:20px;
+      }
       
       body{
         font-family:Arial,sans-serif;
@@ -29,14 +33,14 @@ Html
       
      .btn {
       diplay:inline-block;
-      margin-top:20px;
+      margin-top:15px;
       padding:12px 24px;
       background-color:#2563eb;
-      color:white;
+      color: white;
       text-decoration:none;
       border-radius:30px;
-      font-weight:bold;
-      transition:opacity 0.3s ease;
+      font-weight: bold;
+      transition: 0.3s;
      {
         
     .btn:hover {
@@ -46,7 +50,12 @@ Html
     #projects {
       margin-top:60px;
     }
-
+     .subheading {
+       color:888;
+       font-weight:normal;
+       margin-bottom:15px;
+     }
+       
    .project {
      background-color:white;
      margin:15px auto;
@@ -75,10 +84,9 @@ Html
 <body>
 
   <h1>Hi,Im Tamar Ok</</h1>
-  <p style="color:#2563eb;font-weight:bold;>Frontend Web Designer</p>
+  <p class="role">Frontend Web Designer</p>
     
-   <a href="malito:your.email@example.com"
-    class="btn"
+   <a href="malito:your.tamarok4@gmail.com" class="btn">Hire Me</a>
     style="display:inline-block;margin-top:15px; padding:12px 24px;
     background-color:#2563eb; color:white;border-radius:30px;
     font-weight:bold;text-decoration:none;transition:0.3s;">
@@ -92,20 +100,24 @@ Html
     box-shadow:0 4px 12 rgba(0,0,0,0.15);"
     >
 
-  <section id="projects" style="margin-top:50px;">
+  <section id="projects">
     <h2>My Coding Projects</h2>
-    <p style="color:#888;">some of the projects I've built recently</p>
+    <p class="subheading">Some of the projects I've built recently</p>
 
-    <div style="background:white;padding:20px; margin:15px auto;
-      max-width:500px; border-radius:12px; box-shadow:0 6px 15px rgba(0,0,0,0.1);">
-      <h3 style="color:#2563eb;">Personal Portfolio</h3>
-      <p>HTML & CSS portfolio website.</p>
-    </div>
+    <div class="project">
+      <h3personal Portfolio</h3>
+        <p>HtMl & CSS portfoli website.</p>
+       <div
 
-    <div style="background:white;padding:20px;margin:15px auto;
-      max-width:500px; border-radius:12px,box-shadow:0 6px 15px rgba(0,0,0,0.1);>
-      <h3 style="color:#2563eb;>Landing Page</h3>
-    <p>Respnsive landing page using HTML and CSS.</p>
+         <div class="project">
+         <h3>Landing Page</h3>
+         <p>Resonsive landing page using HTML and CSS.</p>
+       </div>
+
+        <div class="project">
+          <h3>Contact Form</h3>
+          <p>Simple contact form layout.</p>
+        </div>
     </div>
   </section>
 
