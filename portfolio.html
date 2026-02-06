@@ -5,8 +5,7 @@ Html
 <htm lang="en">
   <head>
   <meta charset="UTF-8"/>
-  <meta name="viewport"content="width=device-width,initial-scale=1.0 />
-  
+  <meta name="viewport" content="width=device-width,initial-scale=1.0 />
     <title>Tamar Ok|portfolio</title>
   
     <style>
@@ -87,14 +86,26 @@ Html
     opacity:0.9;
     }
 
-
     .services {
     display:grid;
     grid-temple-columns: repeat(auto-fit, minmax(220px,1fr));
     gap: 20px;
     margin-top: 30px;
     }
-  
+     .section-card {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    }
+    
+    .projects {
+    display: grid,
+    grid-template-columns: repeat(auto-fit,minimax(250px,1fr))
+    gap: 20px;
+    margin-top: 30px;
+    }
+    
     .project-card {
     background: #ffffff;
     padding: 20px;
@@ -103,7 +114,7 @@ Html
     }
     
 
-    @media (max-width:600px) {
+    @media (min-width:900px) {
     img.profile {
     width: 220px;
     }
@@ -179,7 +190,7 @@ Html
 
       <section class="container"id="contact">
       <h2>Contact Me</h2>
-      <p>Email: tamarok4gmail.com<p>
+      <p>Email: tamarok4@gmail.com<p>
       <p>Whatsapp: +256 751 245 699</p>
       </section>
 
