@@ -8,6 +8,7 @@ Html
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0 />
     <title>Tamar Ok|portfolio</title>
+    
     <style>
       *{
         box-sizing:border-box;
@@ -29,7 +30,7 @@ Html
         padding:15px;
         background:#f5f5f5;
         position:sticky;
-        top: 0;
+        top:0;
     } 
     
       nav a {
@@ -37,13 +38,50 @@ Html
     color:#2563eb;
     font-weight: bold;
     }
+    nav a:hover {
+    text-decoration:underline;
+    }
     
     .container {
     max-width:900px;
     padding:40px 20px;
     text-align: center;
+    margin;auto;
     }
 
+    h1 }
+    margin-bottom:10px;
+    }
+
+    h2 {
+    margin-bottom:20px;
+    }
+
+    .role {
+    color:#2563eb;
+    font-weight:bold;
+    margin-bottom:20px;
+    }
+
+    p {
+    color:#555;
+    margin-bottom:15px:
+    }
+
+    .btn {
+    display:inline-block;
+    padding:12px 25px;
+    background:#2563eb;
+    color:#fff;
+    text-decoratoin:none;
+    border-radius:6px;
+    margin-top:15px;
+    }
+
+    .btn:hover {
+    opacity:0.9;
+    }
+    
     img.profile {
     width:120px !important;
     max-width:120px !important;
@@ -65,39 +103,6 @@ Html
     width:180px!important;
     max-width:180px!important;
     }
-   }
-    
-    h1 {
-    margin-bottom:10px;
-   }
-    
-    h2 {
-    margin-bottom:10px;
-    }
-
-    .role {
-    color:#2563eb;
-    font-weight:bold;
-    margin-bottom:20px
-    }
-
-    p {
-    color:#555;
-    margin-bottom:15px;
-    }
-
-    .btn {
-    display:inline-block;
-    padding: 12px 25px;
-    background:#2563eb;
-    color:#fff;
-    text-decoratoin: none;
-    border-radius:6px;
-    margin-top:15px;
-    }
-    
-    .btn:hover {
-    opacity:0.9;
     }
 
     .services {
@@ -113,12 +118,18 @@ Html
     border-radius:10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
     }
+
+  
+    .service-card h3 {
+    margin-bottom:10px;
+    color:#2563eb;
+    }
     
     .projects {
     display: grid,
     grid-template-columns: repeat(auto-fit,minimax(250px,1fr));
-    gap: 20px;
-    margin-top: 30px;
+    gap:20px;
+    margin-top:30px;
     }
     
     .project-card {
@@ -127,7 +138,12 @@ Html
     boder-radius:10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
     }
-    
+
+    @media (max-width:600px) {
+    img.profile {
+    width:120px;
+    }
+    }
     </style>
     </head>
 
