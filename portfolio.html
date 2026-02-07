@@ -49,12 +49,21 @@ Html
     margin;auto;
     }
 
-    h1 }
-    margin-bottom:10px;
+    h2 }
+    margin-bottom:25px;
+    font-size:1.8rem;
+    color:#222;
+    position:relative;
     }
 
-    h2 {
-    margin-bottom:20px;
+    h2::after {
+    content: ";
+    display:block;
+    width:50px;
+    height:3px;
+    background:#2563eb;
+    margin:8px auto 0 auto;
+    border-radius:2px;
     }
 
     .role {
@@ -76,10 +85,14 @@ Html
     text-decoratoin:none;
     border-radius:6px;
     margin-top:15px;
+    transition:all 0.3s ease;
+    box-shadow:0 4px 8px rgba(0,0,0,0.15);
     }
 
     .btn:hover {
     opacity:0.9;
+    transform:translaterY(-2px);
+    box-shadow:0 6px 12px rgba(0,0,0,0.2);
     }
     
     img.profile {
@@ -103,26 +116,18 @@ Html
     width:180px!important;
     max-width:180px!important;
     }
-    }
-
-    .services {
-    display:grid;
-    grid-temple-columns: repeat(auto-fit, minmax(220px,1fr));
-    gap:20px;
-    margin-top:30px;
-    }
     
      .service-card {
     background: #f9f9f9;
-    padding:20px;
-    border-radius:10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    padding:25px;
+    border-radius:12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition:all 0.3s ease;
     }
 
-  
-    .service-card h3 {
-    margin-bottom:10px;
-    color:#2563eb;
+    .service-card:hover {
+    tranform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.12);
     }
     
     .projects {
@@ -134,9 +139,10 @@ Html
     
     .project-card {
     background: #ffffff;
-    padding:20px;
-    boder-radius:10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    padding:25px;
+    boder-radius:12px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.08);
+    transition:all 0.3s ease;
     }
 
     @media (max-width:600px) {
