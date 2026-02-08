@@ -6,13 +6,16 @@
   initial-scale= 1.0">
   <title>Tamar Ok| Portfolio</title>
 
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6
+    .40./css/all.min.css">
+
   <style>
     * {
-      boxing-sizing: border-box:
-      margin: 0;
-      padding: 0;
-      font-family: Arial,sans-serif;
-    }
+      boxing-sizing: border-box; margin: 0; padding: 0;
+      font-family: Arial,sans-seriff; }
+      html { scroll-behavior: smooth; }
+    
     body {
       background: #fff;
       color: #222;
@@ -26,12 +29,12 @@
       background: #f8f8f8;
       position: sticky;
       top: 0;
-      font-weight: bold;
+      font-weight: bold; z-index: 100; 
     }
     nav a {
       text-decoration: none;
-      color: #2563eb;
-    }
+      color: #2563eb; transition: 0.3s; }
+    
     nav a: hover {
       color: #1e40af;
     }
@@ -39,17 +42,21 @@
     .hero {
       text-align: center;
       padding: 60px 20px;
-      background: #f9fabfb;
+      background: #f9fabfb; animation: fadeIn
+       1s ease forwards;
     }
     .hero img {
       width: 140px;
       height: auto;
       border-radius: 50%;
+      margin-bottom: 20px;
+      transiton: transform 0.3s; 
     }
-    .hero h1 {
-      margin-top: 15px;
-      font-size: 1rem;
+    .hero img: hover { transform: scale( 1.05); }
+    .hero h1 { margin-top: 15px; font-size: 2.4rem;}
+    .hero p { color :#555; margin-top: 8px;font-size:  1rem; 
     }
+    
     .btn-primary {
       display: inline-block;
       margin-top: 20px;
@@ -66,8 +73,9 @@
 
     .services {
       padding: 40px 20px;
-      background: white;
+      background: #fff;
       text-align: center;
+      animation: fadeIn 1.2 ease forwards; 
     }
     .service h2 {
       margin-bottom: 20px;
@@ -97,7 +105,8 @@
     .projects {
       padding: 40px 20px;
       text-align: center;
-    }
+      animation: fadeIn 1.4s ease forwards;}
+    
     .projects h2 {
       margin-bottom: 20px;
     }
@@ -127,15 +136,22 @@
       padding: 40px 20px;
       background: #f9fafb;
       text-align: center;
-    }
+      animation: fadeIn 1.6s ease forwards;}
+    
     .contact h2 {
       margin-bottom: 12px;
     }
 
     @media (max-width: 600px) {
       .hero h1 { font-size: 2rem; }
-      .btn-primary { padding: 10px 24px;}
-    }   
+      .btn-primary { padding: 10px 24px;} 
+      .hero img { width: 110px; }
+    }  
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
 
@@ -163,14 +179,17 @@
         <h2>What I Do</h2>
         <div class"service-cards">
           <div class="services-card">
+            <i class="fas fa-laptop-code"></i>
             <h3>Web Design</h3>
             <p>Beautiful interfaces that look great on all screens.</p>
           </div>
           <div class="service-card">
-            <h3>Fronted Development</h3>
+            <i class="fas fa-code"></i>
+            <h3>Fronted Dev</h3>
             <Responsive sites built with HTML & CSS that scale.</p>
           </div>
           <div class="service-card">
+            <i class="fas-fa-pencil-ruler"></i>
             <h3>Website Redesighn</h3>
             <P>Improving existing sites for better look and clarity.</P>
           </div>
@@ -182,15 +201,18 @@
       <div class="project-cards">
         <div class="project-card">
           <h4>Portfolio Website</h4>
-          <P>A fully responive portfolio using HTML & CSS.</P>
+          <p><a href="https://tamar-ok.github.io/ProductDisplay/"
+         target="_blank">View Project</a></p>       
         </div>
           <div class="project-card">
             <h4>Landing page</h4>
-            <p>Simple landing page design for product features.</p>
+            <p><a href="https://tamar-ok.github.io/LandingPage/"
+         target="_blank">View Project</a></p>
           </div>
           <div class="project-card">
             <h4>Product Display</h4>
-            <P>Responsive showcase page for product features.</P>
+            <p><a href="https://tamar-ok.github.io/ProductDisplay/"
+          target="-blank">View Project</a></p>
           </div>
         </div>
       </section>
