@@ -31,13 +31,21 @@
     nav a { text-decoration:none; color: #222; margin-left.20px;
     font-weight: 500; }
     nav a:hover { color: #007bff; }
+    
     #home { display:flex, flex-direction:column;
     align:-items:center;justify-content:center;nin-height:80vh ;
     text-align:center; padding: 40px 20px; background: #e5foff; }
-    #home img { width: 140px; height: 140px;
-    border-radius: 50%; object-fit: cover; margin-bottom: 20px;
-    transition:transform 0.3s;}
-    #home img:hover { transform:scale(1.05);}
+    #home img 
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    transition:transform 0.3s;
+    }
+    #home img:hover 
+    { transform:scale(1.05);
+    }
     #home h1 { font-size: 2rem;margin-bottom: 10px; }
     #home p { font-size: 1rem, color: #555; }
 
@@ -61,10 +69,13 @@
     gad: 20px, justify-items:center; }
     .project-card { positition: relative; border-radius: 12px;
     overflow:hidden; width: 100%; trnasition: transform 0.3s;
-    cusor: pointer; }
+    cursor: pointer; }
     .project-card img { width: 100%; height: 150px;
     object-fit:cover; display:block; }
-    .project-card .overlay { position:absolute; top:0;
+    .project-card .overlay { position:absolute; top:0; left:0;
+    width: 100%; height: 100%; background:rgba(0,0,0,0.6);
+    color:#fff; display:flex; flex-direction:center; opacity:0;
+    justify-content:center; align-items:center; opacity:0;
     transition: opacity 0 3s; text-align:center; padding: 10px;}
     .project-card:hover .overlay { opacity:1; }
     .project-card h4 { margin-top: 10px; }
@@ -74,7 +85,37 @@
     #contant a:hover { color: #007bff; }
 
     @media(max-width: 768px) { .services
-    { flex-direction: colomn; align-items:center; }}
+    { flex-direction: colomn; align-items:center; }
+    }
+    
+    section {
+    opacity:0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease,transform 0.8s ease;
+    }
+
+    section.visible {
+    opacity: 1;
+    transform: translateY(0);
+    }
+
+    .project-card.overlay {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    }
+    .project-card:hover .overlay {
+    opacity:1;
+    }
+    .services-card
+    transform: translaterY(20px);
+    opacity:0;
+    transition: transform 0.5s ease,opacity 0.5c ease;
+    }
+    .services-card.visible {
+    transform: translateY(0);
+    opacity:1;
+    }
+    
     </style>
     </head>
 
@@ -141,6 +182,7 @@
                   <p>Fronted Only</p>
                 </div>
               </div>
+            </div>
             </section>
 
               <section id="Contact">
@@ -154,7 +196,33 @@
                   <a href="https://www.linkedin"></i></i</a>
                 target="_blank"><i class="fab fa-linkedin"></i></a>
               </section>
+             <script>
+               const sections=document.querySelectorAll('section');
+               const servicesCards=
+                 document.querySelectorAll('.service-card');
+               
+               function reveal() {
+                 sections.forEach(section=> {
+                   const top=section.getBoundingClientRect().top;
+                   const windowHeight= windowHeight= window.innerHeight;
+                   if(top< windowHeight- 100) {
+                     section.classList.add('visible');
+                   }
+                 });
 
+                 serviceCards.forEach(card=> {
+                   const top=card.getBoundingClientRect().top;
+                   const windowHeight= window.innerHeight;
+                   if(top <windowHeight -100) {
+                     card.classList.add(visible');
+                   }
+                 });
+               }
+
+               window.addEventListener('scroll',reveal);
+               window.addEventListener('load',reveal);
+             </script>
+        
             </body>
               <html>
 
