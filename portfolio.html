@@ -1,202 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,
-    initial-scale=1.0'>
-    <title>Tamar's Portfolio</>title>
-    </head>
-    <body>
-  
-    <link
-    href="https://fonts.googleapis.com/css2?family-Roboto:
-  wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+      initial-scale=1.0">
+    <title>Tamar's Portfolio</title>
 
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6
-    .4.0/css/all.min.css'>
-
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6
+      .4.0/css/all.min.css">
     <style>
-    html,body {
-    overflow-y: auto !important;
-    height: auto !important;
-    }
-    * { margin: 0;padding:0; box-sizing: border-box;}
-    body { font-family:'Robot',san-serif;line-height: 1.6;
-    background: #fff; color: #222; }
-    html { scroll-behavior: smooth; }
+      html {scroll-behavior:smooth; }
 
-    nav { display:flex; justify-content:space-between;
-    align-items:center;padding: 15px 30px; background: #f3f4f6;
-    position:sticky; top: 0;z-index: 100; }
-    nav a { text-decoration:none; color: #222; margin-left.20px;
-    font-weight: 500; }
-    nav a:hover { color: #007bff; }
-    
-    #home { display:flex, flex-direction:column;
-    align:-items:center;justify-content:center;nin-height:80vh ;
-    text-align:center; padding: 40px 20px; background: #e5foff; }
-    #home img 
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 15px;
-    transition:transform 0.3s ease;
-    }
-    #home img:hover 
-    { transform:scale(1.05);
-    }
-    #home h1 { font-size: 2rem;margin-bottom: 10px; }
-    #home p { font-size: 1rem, color: #555; }
+      #home img {
+       width:95px;
+       height:95px;
+       border-radius:50%;
+       object-fit:cover;
+       margin-bottom:transform 0.3s ease;
+      }
+      #home img:hover {transform:scale(1.05);}
 
-    section { padding: 60px 20px; text-align:center;}
-    section h2 { font-size: 1.8rem; margin-bottom: 20px;}
-    section p { font-size: 1rem; color: #555; max-width: 700px;
-    margin: 0 auto; }
+      section {
+        opacity:0;
+        transform:translateY(20px);
+        transition:opacity 0.8s ease,transform 0.8s ease;
+      }
+      section.visible { opacity:1;transform:translateY(0);
 
-    .services { display: flex; flex-wrap:wap;
-    justify-content: center; gap: 20px; }
-    .services-card { background: #f3f4f6; padding: 20px;
-    border-radius: 12px; width: 250px; transition: transform 0.3s,
-    box-shadow 0.3s; }
-    service-card:hover { transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);}
-    .services-card h3 { margin-bottom: 10px;}
-    .service-card p { font-size: 0.95rem; color: #555; }
+       .service-card {
+        transform:translateY(20px);
+        opacity:0;
+        transition:transform 0.5 ease,opacity 0.5s ease;
+       }
+       .service-card.visible {
+       transform: translateY(0);
+       opacity:1;
+       }
 
-    .projects { display: grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px, 1frr));
-    gad: 20px, justify-items:center; }
-    .project-card { positition: relative; border-radius: 12px;
-    overflow:hidden; width: 100%; trnasition: transform 0.3s;
-    cursor: pointer; }
-    .project-card img { width: 100%; height: 150px;
-    object-fit:cover; display:block; }
-    .project-card .overlay { position:absolute; top:0; left:0;
-    width: 100%; height: 100%; background:rgba(0,0,0,0.6);
-    color:#fff; display:flex; flex-direction:center; opacity:0;
-    justify-content:center; align-items:center; opacity:0;
-    transition: opacity 0 3s; text-align:center; padding: 10px;}
-    .project-card:hover .overlay { opacity:1; }
-    .project-card h4 { margin-top: 10px; }
+      .project-card {
+       position:relative;
+       overflow:hidden;
+       cursor:pointer;
+      }
+      .project-card img {
+      width:100%;
+      display:block;
+      boder-radius:12px;
+      }
+      .project-card.overlay{
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%
+      height:100%
+      background:rgba(0,0,0,0.5);
+      color:#fff;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      opacity:0;
+      transition:opacity 0.3s ease;
+      font-size:1.2rem;
+      border-radius:12px;
+      }
+      .project-card:hover.overlay {opacity: 1;}
+      </style>
+  </head>
 
-    #contact a { display:inline-block; margin: 10px;
-    font-size: 1.5rem; color: #222; transition: color 0.3s; }
-    #contant a:hover { color: #007bff; }
+</body>
 
-    @media(max-width: 768px) { .services
-    { flex-direction: colomn; align-items:center; }
-    }
-    
-    section {
-    opacity:0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease,transform 0.8s ease;
-    }
-
-    section.visible {
-    opacity: 1;
-    transform: translateY(0);
-    }
-
-    .project-card.overlay {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    }
-    .project-card:hover .overlay {
-    opacity:1;
-    }
-    .services-card
-    transform: translaterY(20px);
-    opacity:0;
-    transition: transform 0.5s ease,opacity 0.5c ease;
-    }
-    .services-card.visible {
-    transform: translateY(0);
-    opacity:1;
-    }
-    
-    </style>
-    </head>
-
-    <body>
-
-    <nav>
-    <div class="logo"><strong>Tamar's Portfolio</strong></div>
-  <div class="nav-links">
-    <a href="#home">Home</a>
-    <a href="#services">Services</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </div>
+</header>
+</nav>
+<ul>
+  <li>a href="#home">Home</a></li>
+  <li>a href="#services">Services</a><li>
+  <li>a href="#project">Projects</a><li>
+  <li>a= href"#contact">Contact"</a><li>
+</ul>
 </nav>
 
-  <section id="home">
-    <img src="me.jpg" alt="Tamar Ok">
-    <h1>Hello,I'm Tamar</h1>
-    <p>Fronted Developer & Web Designer. I create beautiful,
-    responsive websites .</p>
+  <section id="home=">
+    <img src="me.jpg" alt="Me>
+      <hi>Hi,Im Tamar</h1>
+      <p>Fronted Development & Designer</p>
+      </sectoin>
+      </header>
+
+  <sectoin id="services">
+    <div class="service-card">
+      <h3>Web Design</h3>
+      <p>Beautiful interfaces that look greater on all screens</p>
+    </div>
+    <div class="service-card">
+      <h3>Website Redesign</h3>
+      <p>improving existing sites for better clarity and look</p>
+    </div>
   </section>
 
-  <section id="home">
-    <h2>What I DO</h2>
-    <div class="services">
-      <div class="service-card">
-        <h3>Website Redesign</h3>
-        <p>Beautiful interfaces that look great on all screens.</p>
-      </div>
-      <div class="service-card">
-        <h3>Website Redesign</h3>
-        <p>improving existing sites for a better look and clarity.</
-    p>
-        <div>
-          <div class="service-card">
-            <h3>Fronted Dev</h3>
-            <p>Building interactive and responsive web 
-            experiences.</p>
-          </div>
-        </div>
-      </section>
+  <section id="projects">
+    <div class="project-card">
+      <img src="cake.png" alt="Cake project=>
+        <div class="overlay>Cake Project</div>
+  </div>
+  </div class="project-card">
+    <img src="netflix.jpg"alt="Cake Project">
+    <div class="overlay">Netflix Clone</div>
+  </div>
+    
+  </section>
 
-        <section id="projects">
-          <h2>Projects</h2>
-          <div class="projects">
-            <div class="project-card">
-              <img src="netflix1.jpg" alt="Netflix Project">
-              <div class="overlay">
-                <h4>Netflix Clone 1</h4>
-                <P>HTML,CSS,JavaScript</P>
-              </div>
-            </div>
-            <div class="project-card">
-            <img src="netflix2.jpg" alt="Netflix project">
-              <div class="overlay'>
-                <h4>Netflix Clone 2</h4>
-                <p>React, Tailwind CSS</p>
-                </div>
-                </div>
-                </div class="project-card'>
-                <img src="netflix3.jpg" alt="Netflix Project">
-                <div class="overlay">
-                  <h4>Netflix Clone 3</h4>
-                  <p>Fronted Only</p>
-                </div>
-              </div>
-            </div>
-            </section>
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email:tamarok4.com@gmail.com</p>
+  </section>
 
-              <section id="Contact">
-                <h2>Contact Me</h2
-                <a href="malito:your.email@example.com"><i class="fas
-                fa-envelope"></i></a>
-                <a href="https://wa.me/YourNumber" target="_blant"><i
-                 class="fab fa-whatsapp"></i></a> 
-                <a href="https://github.com/Tamar-ok" target"_blank"><i
-                class="fab fab-github"><i></a>
-                  <a href="https://www.linkedin"></i></i</a>
-                target="_blank"><i class="fab fa-linkedin"></i></a>
-              </section>
+  <footer>
+    <p>&copy 2026 Tamar'Sweet  Treats & Portfolio</p>
+  </footer>
+              
              <script>
                const sections=document.querySelectorAll('section');
                const servicesCards=
@@ -208,14 +131,12 @@
                    const windowHeight= windowHeight= window.innerHeight;
                    if(top< windowHeight- 100) {
                      section.classList.add('visible');
-                   }
                  });
 
                  serviceCards.forEach(card=> {
                    const top=card.getBoundingClientRect().top;
                    const windowHeight= window.innerHeight;
-                   if(top <windowHeight -100) {
-                     card.classList.add(visible');
+                   if(top < windowHeight -100) card.classList.add(visible');
                    }
                  });
                }
