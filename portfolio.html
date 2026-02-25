@@ -19,7 +19,7 @@
       /* NAVIGATION */
       nav{
         background:#111;
-        padding:15px;
+        padding:15px 40px;
         position:sticky;
         top:0;
         display:flex;
@@ -36,17 +36,17 @@
 
       nav-Links{
         display:flex;
-        gap:15px;
+        gap:20px;
       }
 
       .nav-Links a{
         color:white;
         text-decoration:none;
         font-weight:bold;
-      }   
+      } 
 
       nav-links a:hover{
-        text-decoration:underline;
+      color:#00ff99;
       }
       
       /* HAMBURGER */
@@ -65,39 +65,82 @@
       
        /* SECTIONS */
       section{
-        padding:60px 20px;
+        padding:60px 40px;
         min-height:80vh;
       }
       
-      /* HERO */
+      /* HERO PREMIUM */
       #home{
         display:flex;
         flex-direction:row;
         align-items:center;
         justify-content:flex-start;
-        gap:25px;
+        gap:40px;
+        min-height:90vh;
+        background:linear-gradient(135deg,#111,#222);
+        color:white;
       }  
 
       #home img{
-        width:90px; /* smaller photo*/
+        width:100px;
         border-radius:50%;
+        border:3px solid #00ff99;
       }
 
       #home h1{
-        margin:0 0 5px 0;
-        font-size:28px;
+        font-size:36px;
+        margin:0 0 10px 0;
+      }
+
+      #home span{
+      color:#00ff99;
       }
 
       #home p{
-        margin:0;
         font-size:18px;
-        color:#333;
+        color:#ccc;
+        margin:0;
       }
+
+      /* PREMIMIUM BUTTON */
+      .btn{
+        display:inline-block;
+        margin-top:20px;
+        padding:12px 25px
+        background:#00ff99;
+        color:#111;
+        text-decoration:none;
+        font-weight:bold;
+        border-radius:25px;
+        transition:0.3s;
+      }
+
+      .btn:hover{
+        background:white;
+        transform:scale(1.05);
+      }
+
+      /* PROJECTS */
+      projects{
+        background:#f4f4f4;
+      }
+
+      #projects h2{
+        text-align:center;
+        margin-bottom:40px;
+      }
+      .projects-container{
+        dispaly:flex;
+        flex-wrap;
+        justify-content:center;
+
+        .
+        
       
       /* PROJECTS*/
       #projects h2 {
         text-align:center;
-        margin-bottom:3opx;
+        margin-bottom:4opx;
       }
 
       .projects-container {
@@ -108,18 +151,18 @@
 
       .project-card{
         margin:20px
-        width:220px;
+        width:230px;
         text-align:center;
         background:white
-        padding:10px;
-        border-radius:8px;
-        box-shadow:02px 5px rgba(0,0,0,0.2);
+        padding:15px;
+        border-radius:10px;
+        box-shadow:03px 10px rgba(0,0,0,0.2);
         transition:transform: 0.3s;
       }
 
       .project-card:hover{
-        transform:translateY(-5px);
-        box-shadow:0 5px 15px rgba(0,0,0,0.3);
+        transform:translateY(-8px);
+        box-shadow:0 8px 20px rgba(0,0,0,0.3);
       }
 
       .project-card img{
@@ -130,7 +173,19 @@
       /* CONTACT*/
       #contact{
         text-align:center;
+        background:#111;
+        color:white;
       }
+
+        #contact a{
+          color:00ff99;
+          text-decoration:none;
+          font-weight:bold;
+        }
+
+        #contact a:hover{
+          color:white;
+        }
       
        /* FOOTER*/
       footer{
@@ -140,7 +195,7 @@
         text-align:center;
       }
       
-      /* MOBILE */
+      /* MOBILE RESPONSIVE */
       @media (max-width:768px){
 
          #home{      
@@ -166,11 +221,13 @@
 
   <nav>
     <h1>Tamar Ok</h1>
+    
     <div class="hamburger" onclick="toggleMenu()">
   </div><div>
   </div></div>
   </div></div>
   </div>
+    
     <div class="nav-links" id="navLinks">
     <a href="#home>Home</a>
       <a href="#projects">Projects</a>
@@ -182,8 +239,12 @@
     <img src="me.jpg" alt="Tamar">
 
     <div>
-    <h1>H1,i'm Tamar</h1>
+    <h1>H1,i'm<span></span> Tamar</span></h1>
+    <p>I design modern and responsive websites that convert
+      visitor into clients.</p>
     <p>Web Designer & Fronted Developer</p>
+                                         
+      <a href="#contact" class=" class="btn>Hire Me</a>
   </div>
   </section>
 
@@ -191,25 +252,20 @@
     <h2>My Projects</h2>
 
     <div class="projects-container">
-
-    <div class="project-card'>
-      <img src="project1.jpg" alt="Project 1">
-      <p>Netflix Clone</p>
-    </div>
-
+  
     <div class="project-card">
-      <img src="project2.jpg">
+      <img src="project1.jpg">
       <p>Modern Portfoilio</p>
     </div>
 
     <div class="project-card">
-      img src="project3.jpg">
-      <p>Landing Page</p>
+      img src="project2.jpg">
+      <p>BuisnessLanding Page</p>
     </div>
 
     <div class="project-card">
-      <img src="project4.jpg" alt="Project 4">
-      <p>Other Projects</p>
+      <img src="project3.jpg"
+      <p>E-commerce</p>
     </div>
       
     </div>
