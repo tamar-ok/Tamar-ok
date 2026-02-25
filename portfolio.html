@@ -7,92 +7,94 @@
       <title>Tamar Web Designer Portfoilo</title>
 
     <style>
-      body {
+      
+      body{
         font-family:Arial,sans-serif;
         margin:0;
         padding:0;
         background:#f4f4f4;
-        scroll-behavior:smooth;
+       scroll-behavior:smooth;
       }
 
-      nav {
+      /* NAVIGATION */
+      nav{
         background:#111;
         padding:15px;
         position:sticky;
         top:0;
-        z-index:100;
         display:flex;
         justify-content:space-between;
         align-items:center;
         flex-wrap:wrap;
       }
 
-      nav h1 {
+      nav h1{
         color:white;
         margin:0;
         font-size:20px;
       }
 
-      nav-Links {
+      nav-Links{
         display:flex;
         gap:15px;
       }
 
-      .nav-Links a {
+      .nav-Links a{
         color:white;
         text-decoration:none;
         font-weight:bold;
-        font-size:16px;
       }   
 
-      nav-links a:hover {
+      nav-links a:hover{
         text-decoration:underline;
       }
-
-      .hamburger {
+      
+      /* HAMBURGER */
+      .hamburger{
         display:none;
         flex-direction:column;
         cursor:pointer;
       }
 
-      .hamburger div {
+      .hamburger div{
         width:25px;
         height:3px;
         background:white;
         margin:4px 0;
-        transition:0.3s;
       }
-
-      section {
+      
+       /* SECTIONS */
+      section{
         padding:60px 20px;
         min-height:80vh;
       }
-
-      #home {
+      
+      /* HERO */
+      #home{
         display:flex;
         flex-direction:row;
         align-items:center;
         justify-content:flex-start;
-        gap:20px;
-        padding:60px 20px;
-        min-height:80vh;
+        gap:25px;
       }  
 
-      #home img {
-        width:100px;
+      #home img{
+        width:90px; /* smaller photo*/
         border-radius:50%;
       }
 
-      #home h1 {
-        margin:10px 0 5px;
-        font-size:28px:
+      #home h1{
+        margin:0 0 5px 0;
+        font-size:28px;
       }
 
-      #home p {
-        color:#333;
+      #home p{
+        margin:0;
         font-size:18px;
+        color:#333;
       }
-
+      
+      /* PROJECTS*/
       #projects h2 {
         text-align:center;
         margin-bottom:3opx;
@@ -104,8 +106,7 @@
         justify-content:center;
       }
 
-      .project-card {
-        display:inline-block;
+      .project-card{
         margin:20px
         width:220px;
         text-align:center;
@@ -113,65 +114,54 @@
         padding:10px;
         border-radius:8px;
         box-shadow:02px 5px rgba(0,0,0,0.2);
-        transition:transform 0.3s,box-shadow 0.3s;
+        transition:transform: 0.3s;
       }
 
-      .project-card:hover {
+      .project-card:hover{
         transform:translateY(-5px);
         box-shadow:0 5px 15px rgba(0,0,0,0.3);
       }
 
-      .project-card img {
+      .project-card img{
         width:100%;
         border-radius:8px;
       }
 
-      .project-card p {
-        margin:10px 0 0;
-        font-weight:bold;
-      }
-
-      #contact {
+      /* CONTACT*/
+      #contact{
         text-align:center;
       }
-
-      #contact h2 {
-        margin-bottom:20px;
-      }
-
-      #contact p {
-        font-size:16px;
-        margin:5px 0;
-      }
-
-      footer {
+      
+       /* FOOTER*/
+      footer{
         background:#111;
         color:white;
         padding:20px;
         text-align:center;
       }
+      
+      /* MOBILE */
+      @media (max-width:768px){
 
-      @media (max-width:768px) {
-        .nav-links {
-          displaay:none;
+         #home{      
           flex-direction:column;
           width:100%;
-          background:#111;
           margin-top:10px;
         }
         
-          .nav-links a {
+          .nav-links a{
           padding:10px;
           text-align:center;
         }
         
           .hamburger {
-            display:flex;
+          display:flex;
         }
       }
         
     </style>
   </head>
+  
 </body>
 
   <nav>
@@ -190,6 +180,8 @@
 
   <section id="home">
     <img src="me.jpg" alt="Tamar">
+
+    <div>
     <h1>H1,i'm Tamar</h1>
     <p>Web Designer & Fronted Developer</p>
   </div>
@@ -198,32 +190,40 @@
   <sectoin id="projects">
     <h2>My Projects</h2>
 
+    <div class="projects-container">
+
     <div class="project-card'>
       <img src="project1.jpg" alt="Project 1">
       <p>Netflix Clone</p>
     </div>
 
     <div class="project-card">
-      <img src="project2.jpg" alt="Project 2">
-      <p>McCullum-style Site</p>
+      <img src="project2.jpg">
+      <p>Modern Portfoilio</p>
     </div>
 
     <div class="project-card">
-      img src="project3.jpg" alt="project 3">
-      <p>Portfolio Preview</p>
+      img src="project3.jpg">
+      <p>Landing Page</p>
     </div>
 
     <div class="project-card">
       <img src="project4.jpg" alt="Project 4">
       <p>Other Projects</p>
     </div>
-
+      
+    </div>
   </sectoin>
 
   <section id="contact">
     <h2>Contact Me</h2>
     <p>Email:tamarok4@gmail.com</p>
-    <p>Phone:+256 751 245 699</p>
+
+    <p>
+    <a href="https://wa.me/256751245699" target="_blank">
+      Chat with me on WhatsApp
+    </a>
+      </p>
   </section>
 
   <footer>
@@ -232,12 +232,9 @@
 
   <script>
     function toggleMenu() {
-      const nav= document.getElementByld('navLinks');
-      if(nav.style.display==='flex') {
-        nav.style.display='none';
-      }else {
-        nav.style.display='flex;
-      }
+     const nav= document.getElementByld("navLinks");
+     nav.style.display=nav.style.dispaly=== "flex" ? "none" :
+      "flex";
     }
   </script>
 
