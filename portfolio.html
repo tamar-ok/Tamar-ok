@@ -131,16 +131,22 @@
       }
       .projects-container{
         dispaly:flex;
-        flex-wrap;
+        flex-wrap:wrap;
         justify-content:center;
 
-        .
-        
+        btn:hover{
+        background:white;
+        transform:scale(1.05);
+        } 
       
       /* PROJECTS*/
       #projects h2 {
-        text-align:center;
-        margin-bottom:4opx;
+       background:f4f4f4;
+      }
+
+      #projects h2{
+      text-align:center;
+      margin-bottom:40px;
       }
 
       .projects-container {
@@ -194,13 +200,32 @@
         padding:20px;
         text-align:center;
       }
+
+      /* SCROLL ANIMATION */
+        .hidden{
+        opacity:0;
+        transform:translateY(40px);
+        transition:all 1s ease;
+        }
+        
+       .show{
+       opacity:1;
+      transform:translateY(0);
+       }
+          
       
       /* MOBILE RESPONSIVE */
       @media (max-width:768px){
 
          #home{      
           flex-direction:column;
-          width:100%;
+           text-align:center;
+         }
+
+        .nav-links{
+          display:none;
+          flex-direction:column;
+          width:100%
           margin-top:10px;
         }
         
@@ -248,7 +273,7 @@
   </div>
   </section>
 
-  <sectoin id="projects">
+  <sectoin id="projects" class="hidden>
     <h2>My Projects</h2>
 
     <div class="projects-container">
@@ -265,13 +290,13 @@
 
     <div class="project-card">
       <img src="project3.jpg"
-      <p>E-commerce</p>
+      <p>E-commerce UI</p>
     </div>
       
     </div>
   </sectoin>
 
-  <section id="contact">
+  <section id="contact" class="hidden">
     <h2>Contact Me</h2>
     <p>Email:tamarok4@gmail.com</p>
 
@@ -292,6 +317,18 @@
      nav.style.display=nav.style.dispaly=== "flex" ? "none" :
       "flex";
     }
+
+    const observer=new intersectionObserver(entries=> {
+    entries.forEach(entry=> {
+      if(entry.isintersecting){
+      entry.target.class.List.add("show");
+      }
+    });
+    });
+
+    const hiddenElements=
+    document.querySelectorAll(".hidden");
+    hiddenElements.forEach(el=> observer.observe(el);
   </script>
 
 </body>
