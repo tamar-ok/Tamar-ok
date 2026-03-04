@@ -10,7 +10,7 @@ initial-scale=1.0">
 body{
 font-family:Arial,sans-serif;
 background:linear-gradient(to bottom,#fdfbfb:,#F5F5F5);
-color:#333333;
+color:#333;
 margin:0;
 padding:0;
 }
@@ -38,7 +38,7 @@ font-size:2.5em;
 }
 
 .subtitle {
-color:#666666;
+color:#666;
 font-size:1.2em;
 }
 
@@ -58,20 +58,11 @@ text-align:center;
 padding:0 20px;
 }
 
-.about h2 {
-margin-bottom:20px;
-}
-
 .projects {
 max-widht:1000px;
 margin:60px auto;
 padding:0 20px;
 text-align:center;
-}
-
-.projects h2 {
-margin-bottom:30px;
-font-size:2em;
 }
 
 .project-card {
@@ -91,17 +82,15 @@ box-shadow:0 12px 30px rgba(0,0,0,0.15);
 
 .project-card img {
 width:100%;
-max-width:300px;
 border-radius:10px;
 margin-bottom:15px;
 }
 
 .project-card h3 {
 color:#D63384;
-margin-bottom:10px;
 }
-  
-.btn {
+
+.btn
 display:inline-block;
 margin-top:10px;
 padding:10px 20px;
@@ -109,19 +98,61 @@ background-color:#D63384;
 color:white;
 border-radius:25px;
 font-size:14px;
-transition:background 0.3s ease;
 text-decoration:none;
-}  
+transition:0.3s;
+ }
 
 .btn:hover {
 background-color:#b82c6f;
+
+.contact {
+  text-align:center;
+  margin:60px auto;
+  padding:0 20px;
+}
+  
+.contain-btn {
+display:inline-block;
+margin:10px;
+padding:12px 25px;
+border-radius:25px;
+background-color:#D63384;
+color:white;
+text-decoration:none;
+transition:0.3s;
+font-size:15px;
+}
+
+.contact-btn i {
+margin-right:8px;
+
+.contact-btn:hover {
+background-color:#b82cb6f;
+  
+.Whatsapp {
+background-color:#25D366;
+}
+
+.whatsapp:hover {
+background-color:#1ebe5d;
 }
   
 footer {
 text-align:center;
 padding:3opx;
-color:#666666;
+color:#666;
 margin-top:60px;
+}
+
+@media (max-width:600px) {
+h1 {
+font-size:1.8em;
+}
+  
+.profile-pic {
+width:150px:
+height:150px;  
+}
 }    
 </style>
 </head>
@@ -142,11 +173,9 @@ margin-top:60px;
 <section class="about">
 <h2>About Me</h2>
 <p>
-I am a passionate aspiring fronted developer focused on
-creater clean,
-elegant,and user-friendly interfaces, I enjoy tuning ideas
-into functional
-and visually appealing websites.
+I build clean,elegant and responsive websites using HTMl
+and CSS.
+I enjoy creating beautiful layouts and structured designs.
 </p>
 </section>
 
@@ -154,13 +183,33 @@ and visually appealing websites.
 <h2>My Projects</h2>
 
 <div class="project-card'>
-<img src="cake-project/cake.png"alt="Cake Project">
+<img src="cake-project/cake.png"alt="Cake Website
+  Screenshot">
 <h3>Cake Website</h3>
 <p>A clean HTML & CSS projects showcasing layout structure,
-navigation links, and image handling.</p>
-<a href="cake-project/index.html" class="btn>View Project</a>
+navigation, and image handling.
+</p>
+
+<a href="./cake-project/index.html" class="btn">
+  View Cake Project
+</a>
 </div>
 
+</section>
+
+<section class="contact">
+<h2>Contact Me</h2>
+<p>You can reach me directly:</p>
+
+<a href="malito:tamarok4@gmail.com"
+class="contact-btn">
+<i class="fas fa-envelope"></i> Email Me
+</a>
+
+<a href="https://wa.me/25671245699" target="_blank"
+class="contact-btn whatsapp">
+<i class="fab fa-whatsapp"></i> WhatsApp Me
+</a>
 </section>
 
 <footer>
@@ -169,6 +218,7 @@ navigation links, and image handling.</p>
 
 </body>
 </html>
+
 
 
 
