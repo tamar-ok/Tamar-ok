@@ -1,16 +1,11 @@
 <!DOCTYPE html>
-<html>
-  
+<html> lang="en">  
 <head>
-
 <meta charset="UTF-8">
-  
  <title>Tamar's Sweet Treats- Home page</title>
-  
  <style>
-   
-/* PAGE */    
-body{
+  /* PAGE STYLING */     
+body {
 margin:0;
 font-family:Arial,sans-serif;
 background:linear-gradient(135deg,#ffe6f0,#fff5e6);
@@ -18,41 +13,41 @@ text-align:center;
 }
 
 /* HEADER */
-header{
+header {
 background:linear-gradient(135deg,#ff7a9c,#ffb347);
 color:white;
 padding:40px 20px;
 }
 
-header h1{
+header h1 {
 margin:0;
 font-size:42px;
 }
 
-header p{
+header p {
 font-size:18px;
 margin-top:10px;
 }
 
 /* MAIN CAKE IMAGE */
-.main-cake{
+.main-cake {
 margin-top:30px;
 border-radius:20px;
 box-shadow:0 8px 20px rgba(0,0,0,0.2);
 }
 
 /* MENU SECTION */
-.menu{
+.menu {
 margin-top:40px;
 {
 
-.menu h2{
+.menu h2 {
 color:#c2185b;
 font-size:32px;
 }
 
 /* MENU CONTAINER */
-.menu-container{
+.menu-container {
 display:flex;
 justify-content:center;
 gap:25px;
@@ -61,7 +56,7 @@ margin-top:25px;
 }
 
 /* CAKE CARD */
-.cake-card{
+.cake-card {
 background:white;
 padding:20px;
 border-radius:15px;
@@ -70,16 +65,23 @@ box-shadow:0 6px 15px rgba(0,0,0,0.15);
 transition:0.3s;
 }
 
-.cake-card:hover{
+.cake-card:hover {
 transform:translaterY(-8px);
 }
 
-.cake-card h3{
+.cake-card img {
+width:200px;
+height:150px;
+object-fit:cover;
+border-radius:12px;
+margin-bottom:10px;
+}
+.cake-card h3 {
 color:#d2691e;
 margin-bottom:8px;
 }
 
-.price{
+.price {
 font-size:20px;
 color:#c2185b;
 font-weight:bold;
@@ -98,7 +100,7 @@ border-radius:20px;
 font-weight:bold;
 }
   
-.order-btn:hover{
+.order-btn:hover {
 background:#c2185b;
 }
 
@@ -106,84 +108,83 @@ background:#c2185b;
 .contact{
 margin-top:50px;
 padding:30px;
-background:fff;
+background:#fff;
 }
   
 .contact h2{
-color:c2185b;
+color:#c2185b;
 }
 
 /*FOOTER*/
 footer {
 margin-top:40px;
-background-color:#f8c8dc;
+background:#f8c8dc;
 padding:15px;
 font-size:14px; 
 }
-  
-</style>
-  
-</head>
 
+@media(max-width:600px){
+.cake-card {
+width:90%;
+}
+
+.cake-card img {
+width:100%;
+heigth:auto;
+}
+}
+</style>  
+</head>
 <body> 
 
 <header>
-<h1> Tamar's Sweet Treats</h1>
-<P>Your taste buds matter </P>
+<h1>Tamar's Sweet Treats</h1>
+<P>Your taste buds matter</P>
 </header>
   
- <img src="cake.png"alt="Delicious cake" width="320"
+ <img src="image/cake.png"alt="Main Cake" width="320"
  class="main-cake">
   
 <section class="menu">
-    
- <h2> Our Menu</h2>
-
+<h2>Our Menu</h2>
 <div class="menu-container">
 
-<div class="cake-card">
-<h3> Choclate Cake</h3>
-<p>Rich Choclate cake with smooth frosting.</p>
+<div class="cake-card">  
+<img src="images/chocolate.jpeg"alt="chocolate cake">
+<h3>Chocolate cake</h3>
+<p>Rich chocolate cake with smoooth frosting.</p>
 <div class="price">UGX 35,000</div>
-<a href="#" class="order-btn">Order Now</a>
+<a href="# class="order-btn">Order Now</a>
 </div>
 
 <div class="cake-card">
-<h3> Vanilla cupcakes</h3>
+<img src="images/vanilla.jpeg"alt="Vanilla Cupcakes">
+<h3> Vanilla Cupcakes</h3>
 <p>Soft vanilla cupcakes with creamy topping.</p>
 <div class="price">UGX 20,000</div>
 <a href="#" class="order-btn">Order Now</a>
 </div>
 
 <div class="cake-card">
+<img src="image/redvelvet.jpeg"alt="Redvelvet Cake">
 <h3> Red Velvet cake</h3>
 <p>Classic red velvet with cream cheese frosting.</p>
 <div class="price">UGX 40,000</div>
 <a href="#" class="order-btn">Order Now</a>
-<div>
-  
 </div>
   
+</div> 
 </section>
-
-<section>
 
 <section class="contact">
-
-<h2>Contact Us</h2>
-  
-<p> WhatsApp:256751245699</p>
-  
-<p> Email:tamarok4@gmail.com</p>
-  
-<p> Kampala,Uganda</p>
-  
-</section>
+ <h2>Contact Us</h2>
+ <p>WhatsApp:256751245699</p>  
+ <p>Email:tamarok4@gmail.com</p>
+ <p>Kampala,Uganda</p>
+ </section>
       
  </footer>
-  
  &copy;2026 Tamar's Sweet Treats|Baked with love
-  
 </footer>
 
 </body>
