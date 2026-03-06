@@ -6,36 +6,39 @@
 initial-scale=1.0">
 <title>Tamar Ok | Portfoilio</title>
 
+<!--FONT AWESOME ICONS-->
 <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6
-.5.0/css/all.min.css">
+hfer="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/
+6.5.0/css/all.min.css">
   
-<style>  
+<style>
+  
 body {
 font-family:'Arial',sans-serif;
 margin:0;
 padding:0;
-background:#f0f0f5;
+text-align:center;
+background:linear-gradient(135deg,#5f2c82,#ff7a18);
 color:#333;
 }
   
+/* HERO */ 
   
 .hero {
-background:linear-gradient(135deg,#ff416c,#ff4b2b);
-  
+background:linear-gradient(135deg,#5f2c82,#ff7a18);
 color:white;
-padding:100px 20px;
+padding:100px 200px;
 text-align:center;
 }
 
 .profile-pic {
-width:300px;
-height:300px;
+width:320px;
+height:320px;
 border-radius:50%
 object-fit:cover;
-border:5px solid white;
+border:6px solid white;
 magin-bottom:20px;
-box-shadow:0 12px 40px rgba(0,0,0,0.4;
+box-shadow:0 15px 45px rgba(0,0,0,0.4);
 }
   
 h1 { 
@@ -45,40 +48,45 @@ font-weight:bold;
 }
 
 .subtitle {
-font-size:1.4em;
-opacity:0.9;
+font-size:1.3em;
+opacity:0.95;
 }
 
+/* DIVIDER */
+  
 .divider {
 width:80px;
 height:5px;
-background-color:#fff;
+background-color:#ff7a18;
 border:none;
 margin:30px auto;
-border-radius:5px;
+border-radius:6px;
 }
+
+/* ABOUT */
 
 .about {
 max-width:800px;
 margin:50px auto;
 text-align:center;
 padding:40px 20px;
-background:linear-gradient(135deg,#ffecd2,#fcb69f);
-border-radius:15px;
-box-shadow:0 6px 25px rgba(0,0,0,0.1);
+background:white;
+border-radius:16px;
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
 }
 
 .about h2 {
-color:#ff4b2b;
-font-size:2.em;
+color:#5f2c82;
+font-size:2.4em;
 margin:bottom:15px;
-font-weight:bold;
 }
 
 .about p {
-font-size:1.2em;
+font-size:1.15em;
 line-height:1.7;
 }
+
+/* PROJECTS */
 
 .projects {
 max-width:1000px;
@@ -88,25 +96,24 @@ text-align:center;
 }
 
 .projects h2 {
-color:#ff4b2b;
+color:white;
 font-size:2.4em;
 margin-bottom:30px;
-font-weight:bold;
 }
   
 .project-card {
-background:linear-gradient(135deg,#f5f7fa,#c3cfe2);
+background:white;
 border-radius:16px;
 padding:25px;
 margin:30px auto;
 max-width:450px;
-box-shadow:0 12px 35px rgba(0,0,0,0.15);
-transition:transform 0.3s ease, box-shadow 0.3s ease;
+box-shadow:0 15px 40px rgba(0,0,0,0.2);
+transition:transform 0.3s, box-shadow 0.3s ;
 }
 
 .project-card:hover {
 transform:translateY(-10px);
-box-shadow:0 18px 45px rgba(0,0,0,0.2);
+box-shadow:0 20px 50px rgba(0,0,0,0.3);
 }
 
 .project-card img {
@@ -116,42 +123,42 @@ margin-bottom:15px;
 }
 
 .project-card h3 {
-color:#ff416c;
+color:#ff7a 18;
 margin-bottom:10px;
-font-weight:bold;
 }
 
 .btn {
 display:inline-block;
 margin-top:10px;
 padding:14px 28px;
-background:linear-gradient(135deg,#ff416c,#ff4b2b);
+background:linear-gradient(135deg,#5f2c82,#ff7a 18));
 color:white;
 border-radius:30px;
 text-decoration:none;
-font-size:16px;
 font-weight:bold;
 transition:0.3s;
 }
 
 .btn:hover {
-background:linear-gradient(135deg,#ff4b2b,#ff416c);
+background:linear-gradient(135deg,#ff7a18,#5f2c82);
 }
+
+/* CONTACT */
 
 .contact {
 text-align:center;
 margin:60px auto;
 padding:50px 20px;
-background:linear-gradient(135deg,#ide099,#1dc8cd);
-border-radius:15px;
-box-shadow:0 6px 25px rgba(0,0,0,0.1);
-color:white;
+background:white;
+border-radius:16px;
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+max-width:800px;
 }
 
 .contact h2 {
-font-size:2.4em;
-margin-bottom:15px;
-font-weight:bold;
+font-size:2.2em;
+margin-bottom:10px;
+color:#5f2c82;
 }
 
 .contact-buttons {
@@ -165,76 +172,78 @@ flex-wrap:wrap;
 display:inline-flex;
 align-items:center;
 justify-content:center;
-gap:8px;
+gap:10px;
 padding:14px 28px;
 border-radius:30px;
-background-color:white;
-color:#ff416c;
+background:#5f2c82;
+color:white;
 font-weight:bold;
 text-decoration:none;
-font-size:16px;
 transition:0.3s;
 }
 
-.contact-btn i {
-font-size:18px;
-}
-
 .contact-btn:hover {
-background-color:#ff416c;
-color:white;
+background:#ff7a18;
 }
 
 .whatsapp {
-color:#25D366;
+background:#25D366;
 }
 
 .whatsapp:hover {
 color:white;
-background-color:#25D366;
+background-color:#1ea955;
 }
+
+/*FOOTER */  
 
 footer {
 text-align:center;
 padding:30px;
-color:#333;
+color:white;
 font-weight:bold;
 }
 
+/* MOBILE */
+
 @media (max-width:600px) {
+  
 h1 {
-font-size:2.4em;
+font-size:2.3em;
 }
 
 .profile-pic {
-width:200px;
-height:200px;
+width:220px;
+height:220px;
 }
 
 .project-card {
 max-width:90%;
 }
 
-.contact-btn {
-font-size:15px;
-padding:12px 20px;
-}
 }
 </style>
 </head>
+  
 </body>
 
 <header class="hero">
+  
 <img src="me.jpg"alt="Tamar Ok" class="profile-pic">
+  
 <h1>Tamar Ok</h1>
+  
 <p class="subtitle">Aspiring Fronted Developer |
   Passionate about clean UI</p>
+  
 </header>
 
 <hr class="divider">
   
 <section class="about">
+  
 <h2>About Me</h2>
+  
 <p>
 I build clean,elegant,and responsive website using HTML and CSS.
 I enjoy creating beautiful layouts and structure designs that
@@ -243,28 +252,36 @@ I enjoy creating beautiful layouts and structure designs that
 </section>
 
 <section class="projects">
+  
 <h2>My Projects</h2>
 
 <div class="project-card'>
+  
 <img src="cake-project/cake.png"alt="Cake Website
   Screenshot">
+  
 <h3>Cake Website</h3>
+  
 <p>
   A clean HTML & CSS project showing layout structure,
 navigation, and image handling.
 </p>
+  
 <a href="./cake-project/index.html" class="btn">
-  View Cake Project
-</a>
+  View Cake Project</a>
+  
 </div>
 
 </section>
 
 <section class="contact">
+  
 <h2>Contact Me</h2>
+  
 <p>You can reach me directly:</p>
   
 <div class="contact-buttons">
+  
 <a href="malito:tamarok4@gmail.com"
 class="contact-btn">
 <i class="fas fa-envelope"></i> Email Me
@@ -274,15 +291,19 @@ class="contact-btn">
 class="contact-btn whatsapp">
 <i class="fab fa-whatsapp"></i> WhatsApp Me
 </a>
-</div>  
+  
+</div>
+  
 </section>
 
 <footer>
 &copy; 2026 Tamar Ok | All Rights Reserved
+  
 </footer>
 
 </body>
 </html>
+
 
 
 
