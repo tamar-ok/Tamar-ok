@@ -1,106 +1,190 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8>"
- <title>Tamar's Sweet Treats- Home page</title>
- <style>
-  ul{
-    list-style:none;
-    padding:0;
-    margin:0;
-  }
-
-  li{
-    font-size:18px;
-    margin:10px 0;
-    color:#000
-  }
+<html>
   
-  .container{
-    max-width:600px;
-    margin:0 auto;
-    padding:20px;
-  }
-body {  
- text-align: center;  
-font-family:Arial,sans-serif;  
-background-color :#ffe6f0;  
+<head>
+
+<meta charset="UTF-8">
+  
+ <title>Tamar's Sweet Treats- Home page</title>
+  
+ <style>
+   
+/* PAGE */    
+body{
 margin:0;
-padding:0;
-min-height: 100vh;
-display:flex;
-flex-direction:column;            
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#ffe6f0,#fff5e6);
+text-align:center;
 }
 
-h1 {
-color:#d2691e;        
+/* HEADER */
+header{
+background:linear-gradient(135deg,#ff7a9c,#ffb347);
+color:white;
+padding:40px 20px;
+}
+
+header h1{
+margin:0;
+font-size:42px;
+}
+
+header p{
+font-size:18px;
+margin-top:10px;
+}
+
+/* MAIN CAKE IMAGE */
+.main-cake{
 margin-top:30px;
+border-radius:20px;
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
 }
 
-  /* SUB HEADINGS */
-h2 {
-  color:#c2185b;     
-  margin-top:40px;
+/* MENU SECTION */
+.menu{
+margin-top:40px;
+{
+
+.menu h2{
+color:#c2185b;
+font-size:32px;
 }
 
-/*PARAGRAPH TEXT */
-p {
-  font-size: 18px;
+/* MENU CONTAINER */
+.menu-container{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+margin-top:25px;
 }
 
-/* IMAGES */
-img {
-margin:20px10;         
-border-radius:15px;   
-box-shadow:0 4px 6px rgba(0,0,0,0,2);
+/* CAKE CARD */
+.cake-card{
+background:white;
+padding:20px;
+border-radius:15px;
+width:230px;
+box-shadow:0 6px 15px rgba(0,0,0,0.15);
+transition:0.3s;
 }
 
-/*MENU LIST*/
-ul {
-  list-style:none;   
-  padding:0; 
+.cake-card:hover{
+transform:translaterY(-8px);
 }
 
-li{
-  font-size: 18px;
-  margin:8px 0;
+.cake-card h3{
+color:#d2691e;
+margin-bottom:8px;
+}
+
+.price{
+font-size:20px;
+color:#c2185b;
+font-weight:bold;
+margin:10px 0;
+}
+
+/* ORDER BUTTON */
+.order-btn{
+display:inline-block;
+margin-top:10px;
+padding:10px 18px;
+background:#ff7a9c;
+color:white;
+text-decoration:none;
+border-radius:20px;
+font-weight:bold;
+}
+  
+.order-btn:hover{
+background:#c2185b;
+}
+
+/* CONTACT SECTION */
+.contact{
+margin-top:50px;
+padding:30px;
+background:fff;
+}
+  
+.contact h2{
+color:c2185b;
 }
 
 /*FOOTER*/
 footer {
-  margin-top:40px;
-  padding: 15px;
-  background-color:#f8c8dc;
-  font-size:14px; 
+margin-top:40px;
+background-color:#f8c8dc;
+padding:15px;
+font-size:14px; 
 }
- </style>
+  
+</style>
+  
 </head>
 
 <body> 
 
-  <div class="container">
-
-  <h1>Tamar's Sweet Treats</h1>
-  <P>Your taste buds matter</P>
-
+<header>
+<h1> Tamar's Sweet Treats</h1>
+<P>Your taste buds matter </P>
+</header>
   
-    <img src="cake.png"alt="Delicious cake" width="300">
-
+ <img src="images/cake.png"alt="Delicious cake" width="320"
+ class="main-cake">
+  
+<section class="menu">
     
-    <h2>Our Menu</h2>
+ <h2> Our Menu</h2>
 
-    <ul>
-      <li>Choclate Cake</li>
-      <li>Vanilla Cupcakes</li>
-    </li>Red Velvet Cake</li>
-    </ul>
+<div class="menu-container">
 
-  </div>
+<div class="cake-card">
+<h3> Choclate Cake</h3>
+<p>Rich Choclate cake with smooth frosting.</p>
+<div class="price">UGX 35,000</div>
+<a href="#" class="order-btn">Order Now</a>
+</div>
 
+<div class="cake-card">
+<h3> Vanilla cupcakes</h3>
+<p>Soft vanilla cupcakes with creamy topping.</p>
+<div class="price">UGX 20,000</div>
+<a href="#" class="order-btn'>Order Now</a>
+</div>
+
+<div class="cake-card">
+<h3> Red Velvet cake</h3>
+<p>Classic red velvet with cream cheese frosting.</p>
+<div class="price">UGX 40,000</div>
+<a href="#" class="order-btn">Order Now</a>
+<div>
+  
+</div>
+  
+</section>
+
+<section>
+
+<section class="contact">
+
+<h2>Contact Us</h2>
+  
+<p> WhatsApp:256751245699</p>
+  
+<p> Email:tamarok4@gmail.com</p>
+  
+<p> Kampala,Uganda</p>
+  
+</section>
       
-    </footer>
-    &copy;2026 Tamar's Sweet Treats|Baked with love
-  </footer>
+ </footer>
+  
+ &copy;2026 Tamar's Sweet Treats|Baked with love
+  
+</footer>
 
 </body>
 </html>
