@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html> 
+<html> lang="en"> 
  
 <head>
+ <meta charset="UTF-8">
+ <meta name="viewport"content="width,
+  initial-scale=1.0">
  <title>Tamar's Sweet Treats</title>
  
  <style>
@@ -14,10 +17,14 @@ font-family:Arial,san-serif;
  padding:0;
 }
 
+  header {
+   background:#ffb6c1;
+   padding:25px;
+
   h1 {
-   color:#d2691e;
-   font-size:40px;
-   margin-top:30px;
+   color:#8b0000;
+   font-size:36px;
+   margin:0;
   }
 
   h2 {
@@ -29,30 +36,68 @@ font-family:Arial,san-serif;
    color:#8b4513;
   }
 
+   p {
+    font-size:18px;
+
   .maincake {
-  width:420px;
+  width:400px;
+   max-width:90%;
    border-radius:20px;
    margin-top:20px;
   }
 
-.cake {
- width:300px;
+   .menu {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
+    padding:20px;
+   }
+    
+
+.card {
+ background:white;
  border-radius:15px;
-margin:15px;
-box-shadow:0 4px 8px rgba(0,0,0,0.2);
+width:20px;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
 }
 
-.menu {
-margin-top:30px;
+.card img {
+width:100%;
+ border-radius:12px;
 }
+
+ .contact {
+  background:#fff0f5;
+  margin-top:40px;
+  padding:30px;
+ }
+
+  .contact p {
+   margin:8px;
 
 footer {
-margin-top:50px;
-background:#f8c8dc;
+margin-top:20px;
 padding:15px;
+background:#f8c8dc;
 font-size:14px;
 }
 
+ @media (max-width:600px){
+
+  h1 {
+   font-size:28px;
+  }
+
+  .menu {
+   flex-direction:column;
+   align-items:center;
+   
+   .card {
+    width:90%;
+   }
+
+  }
 
 </style>  
  
@@ -69,26 +114,49 @@ font-size:14px;
 <h2>Our Menu</h2>
 
  <div class="menu">
+  
+ <div class="card">
+ <h3>Chocolate Cake</h3>
+<img src="chocolate.jpeg" alt=class="Chocolate Cake">
+  <P>Rich chocolate cake</P>
+<p><b>UGX 35,000</b></p>
+ </div>
  
- <h3>Chocolate Cake- UGX 35,000</h3>
-<img src="chocolate.jpeg" class="cake">
-<p>Rich chocolate cake made with premium cocoa.</p>
- 
- <h3>Vanilla Cupcakes - UGX 20,000</h3>
-<img src="vanilla.jpeg" class="cake">
-<p>Soft vanilla cupcakes with creamy frosting.</p>
- 
-<h3>Red Velvet Cake - UGX 40,000</h3>
-<img src="redvelvet.jpeg" class="cake">
-<p>Classic red velvet with cream cheese frosting.</p>
+ <div class="card">
+ <h3>Vanilla Cupcakes</h3>
+<img src="vanilla.jpeg" alt="Chocolate Cake">
+<p>Soft vanilla cupcakes</p>
+  <p><b>UGX 20,000</b></p>
+ </div>
+<div class="card"> 
+<h3>Red Velvet Cake</h3>
+<img src="redvelvet.jpeg" alt="Red Velvet Cake">
+<p>Classic red velvet cake</p>
+ <p><b>UGX 40,000</b></p>
  
 </div>
-       
+
+ <div class="contact">
+
+  <h2>Contact Us</h2>
+  
+<p>Location: Kampala,Uganda</p>
+  
+ <p>Email:tamar0k4@mail.com</p>
+
+  <p>
+   whatsApp:
+   <a href="https://wa.me/256751245699" target="_blank">
+    Chat with us
+   </a>
+  </p>
+
+ </div>
+  
  </footer>
  &copy;2026 Tamar's Sweet Treats|Baked with love
 </footer>
 
 </body>
- 
 </html>
 
