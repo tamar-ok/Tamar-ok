@@ -131,7 +131,7 @@ margin-bottom:10px;
 display:inline-block;
 margin-top:10px;
 padding:14px 28px;
-background:linear-gradient(135deg,#5f2c82,#ff7a 18));
+background:linear-gradient(135deg,#5f2c82,#ff7a 18);
 color:white;
 border-radius:30px;
 text-decoration:none;
@@ -141,6 +141,39 @@ transition:0.3s;
 
 .btn:hover {
 background:linear-gradient(135deg,#ff7a18,#5f2c82);
+}
+
+#reviews {
+text-align:center;
+padding:60px 20px;
+background:#f0f4f8;
+}
+
+#reviews h2 {
+font-size:2.4em;
+margin-bottom:40px;
+color:#1a1a1a;
+}
+
+.review-container {
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+}
+
+.review-card  {
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 4px 12px rgba(0,0,0,0.15);
+max-width:300px;
+}
+
+.review-card h4 {
+margin-top:15px
+color:#ff416c;
+font-weight:bold;
 }
 
 /* CONTACT */
@@ -282,18 +315,35 @@ navigation, and image handling.
 </p>
   
 <a href="cake-project/index.html" 
-  class="btn"> View Cake Project</a>
-  
+  class="btn"> View Cake Project</a>  
 </div>
-
 </section>
 
-<section class="contact">
+<section id="reviews">
+<h2>What Clients Say About My Work</h2>
+<div class="review-container">
+<div class="review-card">
+<p>"Tamar designed a clean and modern website for our 
+small buisness.She was professional and creative."</p>
+<h4>- Alex M., Startup Owner</h4>
+</div>
+<div class="review-card">
+<p>"I  loved working with Tamar.She turned our ideas into 
+a fully functional portfoilio site."</p>
+<h4>- jessica L., Freelancer</h4>
+</div>
+</div class="review-card">
+<p>"Tamar's attention to detail and UX design skills are
+amazing.Highly recommended!"</p>
+<h4>-David H., Project Manager</h4>
+</div>
+</div>
+</section>
   
-<h2>Contact Me</h2>
-  
-<p>You can reach me directly:</p>
-  
+
+<section class="contact">  
+<h2>Contact Me</h2> 
+<p>You can reach me directly:</p>  
 <div class="contact-buttons">
   
 <a href="malito:tamarok4@gmail.com"
@@ -318,6 +368,7 @@ class="contact-btn whatsapp">
 
 </body>
 </html>
+
 
 
 
