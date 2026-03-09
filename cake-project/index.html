@@ -145,6 +145,25 @@ background:#ff7aa2;
    width:300px;
   }
   }
+
+ /*---ADD ORDER BUTTON CSS BELOW THIS LINE---*/
+ .order-btn {
+ background:#ff69b4;
+ color:white;
+ padding:12px 25px;
+ border:none;
+ border-radius:25px;
+ cursor:pointer;
+ font-weight:bold;
+ margin-top:10px;
+ transition:transform 0.2s, background 0.2s;
+ }
+
+ .order-btn:hover {
+ background:#ff4d88;
+ transform:scale(1.05);
+ }
+  
 </style> 
  
 </head>
@@ -163,6 +182,7 @@ background:#ff7aa2;
  <h3>Chocolate Cake</h3>
   <P>Rich and creamy chocolate delight</P>
   <p class="price">UGX 35,000</p>
+  <button class="order-btn">Order Now</button>
  </div>
  
  <div class="card">
@@ -170,13 +190,15 @@ background:#ff7aa2;
 <h3>vanilla cupcakes</h3>
 <p>Soft and creamy vanilla cupcakes</p>
  <p class="price">UGX 20,000</p>
+ <button class="order-btn">Order Now</button>
  </div>
   
 <div class="card"> 
 <img src="redvelvet.jpeg" alt="Red Velvet Cake">
 <h3>Red Velvet cake</h3>
 <p>Classic red velvet with cream cheese frosting</p>
- <p><b>UGX 40,000</b></p>
+ <p class="price">UGX 40,000</b></p>
+ <button class="order-btn">Order Now</button>
 </div>
   
  </section>
@@ -197,7 +219,7 @@ background:#ff7aa2;
 
  <div class="review-card">
   <h3>Daniel</h3>
- <p class="stars">&#127775,&#127775,&#12777,&#127775;</p>
+ <p class="stars">&#127775,&#127775,&#127775,&#127775;</p>
  <p>"Very fresh and delicious cake.I will definately order
   agian!"</p>
  </div>
