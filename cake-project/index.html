@@ -55,6 +55,10 @@ font-family:Arial,san-serif;
    box-shadow:0 6px 18px rgba(0,0,0,0.2);
    padding:15px;
    transition:transform 0.3s,box-shadow 0.3s;
+   display:flex;
+   flex-direction:column; /* ensures button stacks below text
+   */
+   align-items:center;
   }
 
    .cake-card:hover { 
@@ -144,8 +148,15 @@ background:#ff7aa2;
   .hero-img {
    width:300px;
   }
-  }
 
+  /* ORDER BUTTONS for mobile */
+ .order-btn {
+  width:80%;   /* make it wide but leave a space 
+  on sides */
+ font-size:16px; /*slightly smaller text for mobile */ 
+ }
+ }
+  
  /*---ADD ORDER BUTTON CSS BELOW THIS LINE---*/
  .order-btn {
  background:#ff69b4;
